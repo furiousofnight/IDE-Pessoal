@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>IDE IA • Workspace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="stylesheet" href="/static/css/buttons.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+</head>
+<body>
+  <div id="overlay-toast" class="toast" role="alert" aria-live="polite"></div>
+  <header>
+    <div class="logo">IDE <span>IA</span></div>
+    <nav>
+        <button id="btn-new">+ Novo</button>
+        <button id="btn-theme" aria-label="Alternar tema">🌙</button>
+        <span id="ia-status" style="margin-left:14px;font-weight:bold;color:#ffdb50;">IA: Verificando...</span>
+        <button id="toggle-sidebar" aria-label="Alternar navegação">☰</button>
+      <div class="toolbar">
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar" aria-label="Avatar IA">🤖</div>
+        <div class="details">IA Workspace</div>
+      </div>
+      <section class="sidebar-section">
+        <span class="section-title">Arquivos Salvos</span>
+        <div id="saved-files">Nenhum arquivo salvo.</div>
+      </section>
+    </aside>
+    <main class="workspace">
+      <div class="tab-bar">
+        <button class="tab active" data-tab="#tab-chat" aria-controls="tab-chat">Chat</button>
+        <button class="tab" data-tab="#tab-code" aria-controls="tab-code">Preview Código</button>
+        <button class="tab" data-tab="#tab-history" aria-controls="tab-history">Histórico</button>
+      </div>
+      <section id="tab-chat" class="tab-content active" aria-labelledby="tab-chat">
+        <div id="chat-messages" class="chat-list"></div>
+        <div class="chat-controls">
+          <input type="text" id="input-msg" placeholder="Digite sua mensagem para a IA..." autocomplete="off" autofocus aria-label="Mensagem para IA">
+          <button onclick="sendMessage()">Enviar</button>
+          <button onclick="speakLastMessage()" title="Ouvir mensagem">🔊</button>
+        </div>
+      </section>
+      <section id="tab-code" class="tab-content" aria-labelledby="tab-code">
+        <div class="code-header">
+          <div class="code-actions">
+            <button onclick="saveGeneratedCode()" class="btn-save" title="Salvar código gerado">💾 Salvar</button>
+            <button onclick="rejectCode()" class="btn-reject" title="Rejeitar e limpar código">❌ Rejeitar</button>
+            <button onclick="clearPreview()" class="btn-clear" title="Limpar área de preview">🧹 Limpar</button>
+          </div>
+        </div>
+        <pre><code id="code" class="hljs language-python" aria-label="Preview de código"></code></pre>
+      </section>
+      <section id="tab-history" class="tab-content" aria-labelledby="tab-history">
+        <div id="file-preview"></div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

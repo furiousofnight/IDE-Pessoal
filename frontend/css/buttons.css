@@ -1,0 +1,52 @@
+.code-header {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.code-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.code-actions button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-save {
+  background-color: var(--accent-color);
+  color: white;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-save:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.btn-reject {
+  background-color: var(--error-color);
+  color: white;
+  border: 1px solid var(--error-color);
+}
+
+.btn-reject:hover {
+  background-color: #d32f2f;
+}
+
+.btn-clear {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-clear:hover {
+  background-color: var(--hover-color);
+}

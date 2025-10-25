@@ -1,0 +1,17 @@
+
+flask
+flask-cors
+flask-limiter
+werkzeug
+python-dotenv
+pyttsx3
+llama-cpp-python
+beautifulsoup4
+wikipedia-api
+requests
+psutil
+nltk
+numpy
+torch
+bleach
+webencodings
