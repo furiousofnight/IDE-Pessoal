@@ -2,7 +2,7 @@
 
 > **INTERFACE PROFISSIONAL**: Layout moderno, responsivo, inspirado em IDEs (VS Code/JetBrains/GPT), dark theme, UI harmoniosa e navegação intuitiva.
 >
-> **100% IA LOCAL**: Orquestrador híbrido — Llama2-7b-chat para diálogo e explicação, stable-code-3b para geração de código. Tudo privado e gratuito!
+> **100% IA LOCAL**: Orquestrador híbrido —AI-chat para diálogo e explicação, AI-CODE para geração de código. Tudo privado e gratuito!
 
 ## Como rodar
 1. Baixe e coloque modelos `.gguf` em `model/` o sistema é hibrido AI de chat e AI de code, entao é necessário 2+ modelos caso ache necessario.
